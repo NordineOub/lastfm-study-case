@@ -1,8 +1,3 @@
-"""
-Data preparation functions for LastFM dataset analysis.
-Handles PySpark transformations for session-based analysis.
-"""
-
 from typing import Tuple
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F

@@ -7,7 +7,6 @@ import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.stattools import adfuller
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-import pickle
 
 
 def check_stationarity(timeseries: pd.Series) -> Dict[str, float]:

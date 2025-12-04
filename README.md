@@ -15,5 +15,5 @@ You can define the DATA_PATH in docker-compose.yml with the path of the download
 ### Launch streamlit with Docker compose
 ```bash
 # Build the image
-docker-compose up -d --build
+docker-compose up --build
 ```
