@@ -7,6 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.svm import SVR
+import pickle
 
 
 def prepare_train_test_split(
@@ -120,7 +121,7 @@ def train_multiple_models(
         gs.fit(X_train, y_train)
         best_model = gs.best_estimator_
         y_pred = best_model.predict(X_test)
-        
+        pickle.dump(best_model, open(f"../models/lastfm_trained_{name}.pkl", "wb")) 
         mse = mean_squared_error(y_test, y_pred)
         rmse = np.sqrt(mse)
         r2 = r2_score(y_test, y_pred)

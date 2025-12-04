@@ -7,6 +7,7 @@ import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.stattools import adfuller
 from sklearn.metrics import mean_absolute_error, mean_squared_error
+import pickle
 
 
 def check_stationarity(timeseries: pd.Series) -> Dict[str, float]:
@@ -45,6 +46,8 @@ def fit_sarimax_model(
     """
     model = SARIMAX(df_ts, order=order, seasonal_order=seasonal_order)
     results = model.fit()
+    pickle.dump(results, open(f"../models/lastfm_trained_SRIMAX.pkl", "wb")) 
+
     return results
 
 
@@ -82,14 +85,12 @@ def forecast_with_sarimax(
     Returns:
         Tuple of (fitted_model, forecast, metrics)
     """
-    # Fit model
     results = fit_sarimax_model(df_ts, order, seasonal_order)
     
-    # Generate forecast
     forecast = results.forecast(steps=forecast_periods)
     
-    # Evaluate on last periods
     observed = df_ts[-forecast_periods:]
     metrics = evaluate_forecast(observed, forecast[:forecast_periods])
+    
     
     return results, forecast, metrics

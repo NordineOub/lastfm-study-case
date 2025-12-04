@@ -1,15 +1,13 @@
 pyspark==3.5.3
-pandas>=2.0.0
-numpy>=1.24.0
+pandas==2.3.3
+numpy<2,>=1.24.0
 pyarrow==21.0.0
 scikit-learn==1.5.2
-
 statsmodels==0.14.4
-matplotlib>=3.7.0
-
+matplotlib==3.7.0
+setuptools==80.9.0 #avoid distutils deprecation error
 # Jupyter (for local development)
-jupyter>=1.0.0
-jupyterlab>=4.0.0
-nbconvert==7.16.6
+#jupyter>=1.0.0
+#jupyterlab>=4.0.0
 ipykernel==7.1.0
 streamlit==1.51.0
