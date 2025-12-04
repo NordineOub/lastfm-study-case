@@ -7,6 +7,11 @@ This project cover the LastFM dataset to answer to 3 questions :
 
 # Setup Instructions
 
+### Import data 
+
+Dataset come from http://ocelma.net/MusicRecommendationDataset/lastfm-1K.html
+You can redirect the DATA_PATH with the path of the downloaded file *userid-timestamp-artid-artname-traid-traname.tsv*
+
 ### Launch streamlit with Docker 
 ```bash
 # Build the image

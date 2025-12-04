@@ -26,6 +26,9 @@ venv/
 ENV/
 env/
 
+
+*.tsv
+!answers/*.tsv
 # Jupyter Notebook
 .ipynb_checkpoints/
 *.ipynb_checkpoints
