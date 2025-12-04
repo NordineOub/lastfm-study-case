@@ -1,6 +1,5 @@
 import sys
 import streamlit as st
-import pandas as pd
 
 # ensure project src is importable
 sys.path.append('..')

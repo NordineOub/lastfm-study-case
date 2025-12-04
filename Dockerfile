@@ -31,5 +31,4 @@ EXPOSE 8888
 
 # Ensure JAVA_HOME (default-java points to installed JDK)
 ENV JAVA_HOME=/usr/lib/jvm/default-java
-
-ENTRYPOINT ["streamlit", "run", "streamlit/main_page_study_case.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app/main_page_study_case.py", "--server.port=8501", "--server.address=0.0.0.0"]
