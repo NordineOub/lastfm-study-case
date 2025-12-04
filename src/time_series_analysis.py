@@ -46,7 +46,6 @@ def fit_sarimax_model(
     """
     model = SARIMAX(df_ts, order=order, seasonal_order=seasonal_order)
     results = model.fit()
-    pickle.dump(results, open(f"../models/lastfm_trained_SRIMAX.pkl", "wb")) 
 
     return results
 
