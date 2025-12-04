@@ -1,6 +1,6 @@
 import sys
 import streamlit as st
-
+import os
 # ensure project src is importable
 sys.path.append('..')
 
@@ -15,7 +15,7 @@ from src.analysis_tracks_by_sessions import (
 )
 
 # Configuration
-DATA_PATH = "./userid-timestamp-artid-artname-traid-traname.tsv"
+DATA_PATH = os.getenv("DATA_PATH")
 DEFAULT_SESSION_GAP_MIN = 20
 DEFAULT_TOP_N_SESSIONS = 50
 DEFAULT_TOP_N_TRACKS = 10

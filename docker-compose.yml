@@ -8,8 +8,8 @@ services:
       - "8501:8501"
     environment:
       - PYTHONPATH=/app
-      - STREAMLIT_APP=streamlit/main_page_study_case.py
-    command: ["streamlit", "run", "${STREAMLIT_APP}", "--server.port=8501", "--server.address=0.0.0.0"]
+      - DATA_PATH=""
+    command: ["streamlit", "run", "app/main_page_study_case.py", "--server.port=8501", "--server.address=0.0.0.0"]
     # Remove the `volumes` line for immutable/deployable images.
     volumes:
       - ./:/app

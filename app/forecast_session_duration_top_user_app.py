@@ -1,6 +1,6 @@
 import sys
 import streamlit as st
-import pandas as pd
+import os
 import numpy as np
 
 # ensure project src is importable
@@ -33,7 +33,7 @@ from sklearn.linear_model import Ridge
 
 
 # Configuration
-DATA_PATH = "./userid-timestamp-artid-artname-traid-traname.tsv"
+DATA_PATH = os.getenv("DATA_PATH")
 SESSION_GAP_SEC = 20 * 60  # 20 minutes
 DEFAULT_FORECAST_PERIODS = 3  # Next 3 months
 
