@@ -10,7 +10,7 @@ This project cover the LastFM dataset to answer to 3 questions :
 ### Import data 
 
 Dataset come from http://ocelma.net/MusicRecommendationDataset/lastfm-1K.html
-You can redirect the DATA_PATH with the path of the downloaded file *userid-timestamp-artid-artname-traid-traname.tsv*
+You can define the DATA_PATH in docker-compose.yml with the path of the downloaded file *userid-timestamp-artid-artname-traid-traname.tsv*
 
 ### Launch streamlit with Docker compose
 ```bash

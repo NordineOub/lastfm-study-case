@@ -28,5 +28,5 @@ ENV JAVA_HOME=/usr/lib/jvm/default-java
 
 # Set default values for environment variables
 ENV STREAMLIT_APP=app/main_page_study_case.py
-ENV DATA_PATH=/mnt/c/Users/NordineOub/Downloads/lastfm-dataset-1K/userid-timestamp-artid-artname-traid-traname.tsv
+ENV DATA_PATH=""
 
