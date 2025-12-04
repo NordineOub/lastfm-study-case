@@ -9,13 +9,14 @@ This project cover the LastFM dataset to answer to 3 questions :
 
 ### Launch streamlit with Docker 
 ```bash
-# Build and start Jupyter Lab
-docker build
-
-### run scripts with Docker
-```bash
 # Build the image
 docker build -t lastfm:latest . 
 # Run a Python script
 sudo docker run -p 8501:8501 lastfm
+```
+
+### Launch streamlit with Docker compose
+```bash
+# Build the image
+docker-compose up -d --force-recreate
 ```

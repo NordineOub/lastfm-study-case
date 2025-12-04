@@ -41,11 +41,6 @@ env/
 .DS_Store
 Thumbs.db
 
-# Data files (large datasets)
-*.tsv
-*.csv
-data/
-
 # Logs
 *.log
 logs/
