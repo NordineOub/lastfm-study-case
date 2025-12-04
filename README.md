@@ -17,7 +17,7 @@ You can redirect the DATA_PATH with the path of the downloaded file *userid-time
 # Build the image
 docker build -t lastfm:latest . 
 # Run a Python script
-sudo docker run -p 8501:8501 lastfm
+docker run -p 8501:8501 lastfm
 ```
 
 ### Launch streamlit with Docker compose

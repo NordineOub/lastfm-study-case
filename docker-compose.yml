@@ -7,7 +7,7 @@ services:
     ports:
       - "8501:8501"
     environment:
-      - STREAMLIT_APP=notebooks/main_page_study_case.py
+      - STREAMLIT_APP=streamlit/main_page_study_case.py
     command: ["streamlit", "run", "${STREAMLIT_APP}", "--server.port=8501", "--server.address=0.0.0.0"]
     # Remove the `volumes` line for immutable/deployable images.
     volumes:
